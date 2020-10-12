@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/off_black</item>
+        <item name="android:textColor">@color/white</item>
+<!--        <item name="colorPrimaryDark">@color/light_grey</item>-->
+        <item name="android:windowBackground">@color/off_black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="menuNavigationIcon">@drawable/ic_santabanta_icon_menu_for_black</item>
+        <item name="languageIcon">@drawable/ic_language_dark_theme</item>
+        <item name="card_bg_color">@color/grey</item>
+        <item name="tabs_bg_color">@color/light_grey</item>
+        <item name="side_menu_bg_color">@color/light_grey</item>
+        <item name="bottom_nav_icon_color_selector">@drawable/bottom_nav_icon_color_selector_dark</item>
+        <item name="search_grey">@color/search_grey_dark</item>
+        <item name="android:statusBarColor">@color/off_black</item>
+        <item name="side_menu_divider_color">@color/dark_grey</item>
+    </style>
+
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:textColor">#4d4d4d</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="menuNavigationIcon">@drawable/ic_santabanta_icon_menu_for_white</item>
+        <item name="languageIcon">@drawable/ic_language_light_theme</item>
+        <item name="card_bg_color">@color/side_menu_white</item>
+        <item name="tabs_bg_color">@color/tab_white</item>
+        <item name="side_menu_bg_color">@color/side_menu_bg</item>
+        <item name="bottom_nav_icon_color_selector">@drawable/bottom_nav_icon_color_selector_light</item>
+        <item name="search_grey">@color/search_grey_light</item>
+        <item name="android:statusBarColor">@color/off_black</item>
+        <item name="side_menu_divider_color">@color/side_menu_white</item>
+    </style>
+
+
+</resources>

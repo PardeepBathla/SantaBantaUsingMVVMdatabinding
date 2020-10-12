@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="subCatAdapter"
+            type="com.example.mvvmsantabanta.fragments.sms.smsCategories.SmsSubCategoriesAdapter" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rootlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/start_end_margin"
+        android:layout_marginEnd="@dimen/start_end_margin"
+        android:background="?android:windowBackground"
+        tools:context=".fragments.sms.smsCategories.SmsSubCategoriesFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <com.example.mvvmsantabanta.transformScrollView.DiscreteScrollView
+            android:id="@+id/itemPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_subCat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/itemPicker"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:adapter="@{subCatAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/sms_sub_category_item" />
+
+    </RelativeLayout>
+</layout>

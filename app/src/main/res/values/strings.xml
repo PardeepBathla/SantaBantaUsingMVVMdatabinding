@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SantaBanta</string>
+
+    <string name="SmsTab">Sms</string>
+    <string name="JokesTab">Jokes</string>
+    <string name="MemesTab">Memes</string>
+    <string name="share">Share:</string>
+    <string name="VideosTab">Videos</string>
+    <string name="home">Home</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="no_content">No Content from Api</string>
+
+    <string name="dsv_ex_msg_dont_set_lm">You should not set LayoutManager on DiscreteScrollView.class instance. Library uses a special one. Just don\'t call the method.</string>
+    <string name="dsv_ex_msg_adapter_wrong_recycler">InfiniteScrollAdapter is supposed to work only with DiscreteScrollView</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="internet_error">Please check your internet connection and try again</string>
+    <string name="alert">Alert</string>
+    <string name="No_Data">No Data available for the Category \nyou have selected</string>
+</resources>

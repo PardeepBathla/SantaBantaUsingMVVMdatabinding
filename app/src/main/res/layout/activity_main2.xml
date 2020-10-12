@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mycontext"
+            type="com.example.mvvmsantabanta.activity.home.Main2Activity" />
+
+        <variable
+            name="myExpandableAdapter"
+            type="com.example.mvvmsantabanta.activity.home.SideMenuExpandableAdapter" />
+
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+                    app:expandedTitleMarginStart="72dp"
+                    app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                    <!--Height of toolbar will be same as the layout which u dont want to scroll under-->
+                  <!--  <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/AppBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        app:layout_collapseMode="pin" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_60sdp"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/start_end_margin"
+                            android:paddingBottom="@dimen/_5sdp">
+
+                            <!--    <ImageView
+                                    android:id="@+id/santabanta"
+                                    android:layout_width="@dimen/_80sdp"
+                                    android:layout_height="@dimen/_80sdp"
+                                    android:src="@drawable/ic_logo" />-->
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_hamburger"
+                                    android:layout_width="@dimen/_32sdp"
+                                    android:layout_height="@dimen/_32sdp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="@dimen/start_end_margin"
+                                    android:src="?menuNavigationIcon" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_selected_module"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SMS"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@+id/iv_hamburger"
+                                    android:textAllCaps="true"
+                                    android:textSize="@dimen/_15ssp"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/rl_search"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@+id/iv_language"
+                                    android:layout_toEndOf="@+id/tv_selected_module"
+                                    android:orientation="horizontal"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:background="@drawable/round_corner_search_bg"
+                                    android:padding="@dimen/_5sdp"
+                                    android:visibility="visible">
+
+
+                                    <ImageView
+                                        android:id="@+id/iv_search"
+                                        android:layout_width="@dimen/_12sdp"
+                                        android:layout_height="@dimen/_12sdp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:tint="?search_grey"
+                                        android:src="@drawable/ic_santabanta_icon_search" />
+
+                                    <EditText
+                                        android:id="@+id/et_search"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:focusable="false"
+                                        android:fontFamily=""
+                                        android:gravity="center_vertical"
+                                        android:layout_gravity="center"
+                                        android:hint="Search"
+                                        android:textColor="?search_grey"
+                                        android:textColorHint="?search_grey" />
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_language"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:src="?languageIcon"
+                                    android:layout_alignParentEnd="true"
+                                    android:visibility="visible" />
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <!-- <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/dark_grey" />-->
+
+
+                        <!--  <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginStart="@dimen/start_end_margin"
+                              android:layout_marginTop="@dimen/_10sdp"
+                              android:layout_marginEnd="@dimen/start_end_margin"
+                              android:background="@drawable/round_corner_stroke_bg"
+                              android:visibility="gone">
+
+                              <EditText
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:background="@null"
+                                  android:hint="Click here to search"
+                                  android:paddingStart="@dimen/_15sdp"
+                                  android:paddingTop="@dimen/_10sdp"
+                                  android:paddingEnd="@dimen/_15sdp"
+                                  android:paddingBottom="@dimen/_10sdp"
+                                  android:textColor="@color/white"
+                                  android:textColorHint="@color/dark_grey" />
+
+                              <ImageView
+                                  android:layout_width="@dimen/_16sdp"
+                                  android:layout_height="@dimen/_16sdp"
+                                  android:layout_alignParentEnd="true"
+                                  android:layout_centerInParent="true"
+                                  android:layout_marginEnd="@dimen/start_end_margin"
+                                  android:src="@drawable/ic_santabanta_icon_search" />
+
+
+                          </RelativeLayout>-->
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <!--    <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:handler="@{context}"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_below="@id/appbar_layout"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+
+            <com.example.mvvmsantabanta.NonSwipeableViewPager
+                android:id="@+id/customViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_navigation_view"
+                android:layout_below="@id/appbar_layout"
+                app:pagerrhandlerr="@{mycontext}"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+<!--                app:pagerrhandlerr="@mycontext"  />-->
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bottom_nav_bg"
+                android:elevation="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                app:itemIconTint="?bottom_nav_icon_color_selector"
+                app:itemTextColor="?bottom_nav_icon_color_selector"
+                app:menu="@menu/bottom_navigation_items" />
+
+            <!--            app:itemIconTint="@color/dark_grey"-->
+            <!--            app:itemTextColor="@color/dark_grey"-->
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_splash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/splash_gradient"
+            android:visibility="gone"
+            tools:context=".activity.SplashActivity">
+
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_splash_bg_oval" />
+
+            <ImageView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_santa_banta_logo" />
+
+
+        </RelativeLayout>
+
+        <!--This must be the last child otherwise recyclerview no click because it needs to place on top of layout-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/left_drawer_recycler"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:dividerHeight="1dp"
+            android:background="?card_bg_color"
+            app:adapter="@{myExpandableAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/side_menu_nav_item" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</layout>
+
+

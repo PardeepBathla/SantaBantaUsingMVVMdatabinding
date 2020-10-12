@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center|start"
+        android:lineSpacingMultiplier="1.2"
+        android:lineSpacingExtra="2dp"
+        android:background="@color/grey"
+        android:text="@{Html.fromHtml(smsDetailModel.content)}"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@color/grey"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center|start"
+        android:lineSpacingMultiplier="1.2"
+        android:lineSpacingExtra="2dp"
+        android:text="@{Html.fromHtml(smsDetailModel.content)}"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="customAttrs">
+        <attr name="menuNavigationIcon" format="reference" />
+        <attr name="languageIcon" format="reference" />
+        <attr name="card_bg_color" format="reference" />
+        <attr name="tabs_bg_color" format="reference" />
+        <attr name="side_menu_bg_color" format="reference" />
+        <attr name="bottom_nav_icon_color_selector" format="reference" />
+        <attr name="search_grey" format="reference" />
+        <attr name="side_menu_divider_color" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DiscreteScrollView">
+        <attr name="dsv_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

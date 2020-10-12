@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "566818167303",
+    "firebase_url": "https://santa-banta-424d7.firebaseio.com",
+    "project_id": "santa-banta-424d7",
+    "storage_bucket": "santa-banta-424d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566818167303:android:a59e51b7c641e2c7c2e8a2",
+        "android_client_info": {
+          "package_name": "com.example.mvvmsantabanta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566818167303-g6nlt7qh0343sg0lflack9vhkmnn42t8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7Cie_uGIJugL1yCs1wjrSTeSQoRRfV3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566818167303-g6nlt7qh0343sg0lflack9vhkmnn42t8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

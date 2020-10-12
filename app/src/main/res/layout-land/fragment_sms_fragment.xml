@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.sms.FragmentSms">
+
+    <data>
+
+        <variable
+            name="mySmsadapter"
+            type="com.example.mvvmsantabanta.fragments.sms.SmsItemAdapter" />
+
+
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:windowBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:adapter="@{mySmsadapter}"
+                android:visibility="visible"
+                app:spanCount="2"
+                tools:listitem="@layout/sms_item"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+
+            <!-- Custom animated loader-->
+           <!-- <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.ThreeBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/orange" />-->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:backgroundTint="?colorPrimary"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/tv_noData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="@string/No_Data"/>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>
